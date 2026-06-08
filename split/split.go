@@ -31,7 +31,10 @@ func Split(text string)[]string{
 			result = append(result, string(tempra))
 			tempra=[]rune{}
 			continue
-		}
+		}	
+	}
+	if len(tempra)!=0{
+		result = append(result, string(tempra))
 	}
 	return result
 }
